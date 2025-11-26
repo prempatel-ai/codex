@@ -1,157 +1,221 @@
-🌱 AgriSense AI
-AI-powered plant care, disease detection & farmer support — built for the fields of India.
-<p align="center"> <img src="https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge"> <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge"> <img src="https://img.shields.io/badge/HuggingFace-Model-yellow?style=for-the-badge"> <img src="https://img.shields.io/badge/Groq-LLM-green?style=for-the-badge"> </p>
-🚀 Overview
+---
 
-AgriSense AI is a modern, farmer-centered platform that combines computer vision, weather intelligence, AI-powered advice, and government support data into one simple, intuitive interface.
+# 🌱 **AgriSense AI**
 
-Designed for Indian farmers, AgriSense AI helps them:
+### *AI-powered plant care, disease detection & farmer support — built for the fields of India.*
 
-Detect diseases early
+<p align="center">
+  <img src="https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/HuggingFace-Model-yellow?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Groq-LLM-green?style=for-the-badge">
+</p>
 
-Understand risk based on weather
+<p align="center">
+  <img src="https://github.com/your-banner-image.png" width="80%" alt="AgriSense Banner"/>  
+</p>
 
-Identify the plant species
+---
 
-Discover state government schemes
+## 🚀 **Overview**
 
-Access official 24×7 helplines
+**AgriSense AI** is a modern, farmer-centric platform that blends:
 
-Get multilingual AI guidance
+* 🌾 Computer vision
+* 🌦️ Weather intelligence
+* 🤖 Multilingual AI support
+* 🏛️ Government scheme discovery
+* 📞 Verified agriculture helplines
 
-All features work seamlessly inside a clean, mobile-friendly Streamlit application.
+Designed specifically for **Indian farmers**, it simplifies plant care and provides actionable insights in seconds.
 
-🌟 Key Features
-🔍 1. AI Disease Detection (Custom Trained Model)
+---
 
-We trained a plant disease classifier on curated images and deployed it on HuggingFace for fast inference.
-Users upload a leaf photo → model outputs disease + confidence.
+## 🌟 **Key Features**
 
-🌿 2. Plant Species Identification
+### 🔍 **1. AI Disease Detection (Custom Model)**
 
-Integrated with PlantNet API, enabling scientific name + common name identification.
+Upload a leaf photo → instantly receive:
 
-🌦️ 3. Field Health Insights
+* Detected disease
+* Confidence score
+* Suggested treatment
 
-Powered by real-time weather:
+Model is trained on curated datasets and deployed on **HuggingFace** for fast inference.
 
-Temperature
+---
 
-Humidity
+### 🌿 **2. Plant Species Identification**
 
-Rainfall
+Powered by **PlantNet API** → detects:
 
-Disease-favorability score
+* Scientific name
+* Common name
+* Species confidence
 
-3-day outbreak risk forecast
+---
 
-🏛️ 4. Government Scheme Finder
+### 🌦️ **3. Field Health Insights**
 
-State-wise scheme scraper shows agriculture subsidies, loans, and benefits relevant to the farmer’s location.
+Real-time weather engine delivers:
 
-🗣️ 5. AI Farming Assistant (Groq)
+* Temperature
+* Humidity
+* Rainfall
+* Disease-favorability score
+* 3-day outbreak risk prediction
 
-Farmers can ask anything—fertilizer schedule, treatment steps, irrigation advice—answered in simple language.
+---
 
-🌐 6. Multi-Language Support
+### 🏛️ **4. Government Scheme Finder**
 
-Built using a dual system:
+State-wise agriculture schemes such as:
 
-UI translations (JSON dictionary)
+* Subsidies
+* Loans
+* Soil health benefits
+* Farmer insurance plans
 
-Dynamic translations via Groq LLM
+Scraped & updated automatically.
 
-📞 7. Official Helplines
+---
 
-Built-in:
+### 🗣️ **5. AI Farming Assistant (Groq)**
 
-Kisan Call Center (1800-180-1551)
+Ask anything in your language:
 
-State-wise agriculture helpline
+* Irrigation tips
+* Fertilizer schedule
+* Disease treatment
+* Climate-based recommendations
 
-🧠 Architecture
+Uses ultra-fast **Groq LLM**.
+
+---
+
+### 🌐 **6. Multi-Language Support**
+
+Includes:
+
+* JSON-based UI translations
+* Dynamic Groq LLM translation
+
+---
+
+### 📞 **7. Built-In Farmer Helplines**
+
+* **Kisan Call Center:** *1800-180-1551*
+* State-wise agriculture department contacts
+
+---
+
+## 🧠 **Architecture**
+
+```
 User Input
      ↓
 Location API → Weather API → Scheme Scraper
-     ↓                ↓               ↓
-PlantNet API ← Image → Trained Disease Model
+     ↓                ↓                ↓
+PlantNet API ← Image Upload → Disease Model
      ↓                ↓
-           Processing Layer
-    (Risk Engine · Insights Engine · LLM Advice)
+         Processing Layer
+ (Risk Engine · Insights Engine · AI Assistant)
      ↓
          Final Output to Farmer
-(Plant ID · Disease · Forecast · Schemes · Helplines · Translations)
+(Plant ID · Disease · Forecast · Schemes · Helplines)
+```
 
-📁 Project Structure
+---
+
+## 📁 **Project Structure**
+
+```
 📦 AgriSense-AI
 ├── app.py                     # Main Streamlit app
 ├── disease_model.py           # HuggingFace inference
 ├── plantnet_api.py            # Plant species identification
-├── weather_api.py             # Weather + Geocoding logic
+├── weather_api.py             # Weather + geocoding logic
 ├── scheme_scraper.py          # State-wise scheme extractor
 ├── translator.py              # Translation engine (JSON + LLM)
 ├── groq_assistant.py          # AI assistant logic
 ├── insights_engine.py         # Risk scoring + analysis
-├── helplines.py               # Official farmers’ helplines
+├── helplines.py               # Farmer helplines
 ├── i18n/                      # Static UI translations
 └── requirements.txt
+```
 
-🔑 API Keys
+---
 
-Create .streamlit/secrets.toml:
+## 🔑 **API Keys Setup**
 
+Create: **`.streamlit/secrets.toml`**
+
+```toml
 GROQ_API_KEY = "your-groq-key"
 PLANTNET_API_KEY = "your-plantnet-key"
+```
 
-How to get keys:
+**How to get keys:**
 
-Groq API: https://groq.com
+| Service    | Link                                                             | Notes               |
+| ---------- | ---------------------------------------------------------------- | ------------------- |
+| Groq API   | [https://groq.com](https://groq.com)                             | Free tier available |
+| PlantNet   | [https://my.plantnet.org/signup](https://my.plantnet.org/signup) | Required            |
+| Open-Meteo | Free                                                             | No key required     |
 
-PlantNet API: https://my.plantnet.org/signup
+---
 
-Open-Meteo: Free, no key required
+## 🛠️ **Installation**
 
-All keys stay hidden using Streamlit Secrets Manager.
-
-🛠️ Installation
+```bash
 git clone https://github.com/prempatel-ai/codex.git
 cd agrisense-ai
 pip install -r requirements.txt
 streamlit run app.py
+```
 
-🧬 Model Notes
+📽️ Demo Video
+<p align="center"> <a href="https://youtu.be/Mdw8fTINJLI" target="_blank"> <img src="https://img.youtube.com/vi/Mdw8fTINJLI/maxresdefault.jpg" alt="AgriSense AI Demo Video" width="75%" style="border-radius: 12px;"> </a> </p> <p align="center"> 🎥 **Click the thumbnail to watch the full demo on YouTube** </p>
 
-The disease model is custom trained and then deployed on HuggingFace for inference.
+---
+
+## 🧬 **Model Notes**
+
+The disease classifier is custom trained and deployed on **HuggingFace**.
+
 Training pipeline includes:
 
-Image cleaning
+* Dataset cleaning
+* Data augmentation
+* Transfer learning
+* Validation & tuning
+* Deployment as transformer-based classifier
 
-Augmentation
+Optimized for **common agricultural diseases** across India.
 
-Transfer learning
+---
 
-Validation & tuning
+## 🤝 **Contributing**
 
-Deployment as transformer-based classifier
+We welcome contributions!
+You can help by improving:
 
-This ensures consistent, reliable predictions for common agricultural diseases.
+* Model accuracy
+* Adding crops
+* Adding regional languages
+* UI/UX design
+* Government scheme scraping
 
-🤝 Contributing
+**Fork → Create Branch → Submit PR**
 
-We welcome improvements!
+---
 
-Improve model accuracy
+## ❤️ **Acknowledgements**
 
-Add more crops
+Built during the **Aviskaar Hackathon**
+with the mission of making **AI accessible to every Indian farmer**.
 
-Add more languages
+---
 
-Enhance scheme scraping
 
-UI/UX refinements
 
-Fork → Create branch → Submit PR.
-
-❤️ Acknowledgements
-
-Built during a Aviskaar hackathon with the goal of making AI accessible to every Indian farmer.
