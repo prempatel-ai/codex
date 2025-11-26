@@ -114,7 +114,7 @@ Open-Meteo: Free, no key required
 All keys stay hidden using Streamlit Secrets Manager.
 
 🛠️ Installation
-git clone https://github.com/your-username/agrisense-ai.git
+git clone https://github.com/prempatel-ai/codex.git
 cd agrisense-ai
 pip install -r requirements.txt
 streamlit run app.py
