@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <img src="logo.png" width="80%" alt="AgriSense Banner"/>  
+  <img src="logo.png" width="40%" alt="AgriSense Banner"/>  
 </p>
 
 ---
